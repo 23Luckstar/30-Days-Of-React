@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { showDate } from "../../src/utils/display-date-and-time";
-
+import { showDate } from "../../utils/display-time.js";
+// import "../../styles/header.scss";
+import headerStyles from "../../styles/header.module.scss";
+const { header, headerWrapper } = headerStyles;
 const Header = ({
   data: {
     welcome,
@@ -12,8 +14,8 @@ const Header = ({
   },
 }) => {
   return (
-    <header>
-      <div className="header-wrapper">
+    <header className={header}>
+      <div className={headerWrapper}>
         <h1>{welcome}</h1>
         <h2>{title}</h2>
         <h3>{subtitle}</h3>

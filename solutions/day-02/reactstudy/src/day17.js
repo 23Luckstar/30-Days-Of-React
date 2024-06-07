@@ -1,10 +1,24 @@
-import React from "react";
+import * as React from "react";
+import { createRoot } from "react-dom/client";
 import {
-  BrowserRouter,
+  createBrowserRouter,
+  RouterProvider,
   Route,
-  NavLink,
-  Switch,
-  Redirect,
-  Prompt,
-  withRouter,
+  Link,
 } from "react-router-dom";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <div>
+        <h1>Hello World</h1>
+        <Link to="about">about</Link>
+      </div>
+    ),
+  },
+  {
+    path: "about",
+    element: <div>about</div>,
+  },
+]);

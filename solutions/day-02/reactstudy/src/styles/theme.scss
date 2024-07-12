@@ -1,9 +1,9 @@
 /* ./styles/header.scss */
-.light {
+.light,.panel-light, .button-light {
   color: #333333;
   background-color: #ffffff;
 }
-.dark{
+.dark, .panel-dark, .button-dark{
   color: aliceblue;
   background-color: black;
 }
